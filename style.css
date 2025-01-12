@@ -1,0 +1,141 @@
+:root {
+    --brightorange: hsl(31, 77%, 52%);
+    --darkcyan: hsl(184, 100%, 22%);
+    --verydarkcyan: hsl(179, 100%, 13%);
+    --gray: hsl(0, 0%, 95%);
+    --white: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    line-height: 150%;
+    color: var(--white);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 5vh;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        width: 100vw;
+    }
+}
+
+h1 {
+    color: var(--gray);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+}
+
+p, .button {
+    font-family: 'Lexend Deca', monospace;
+    font-weight: 400;
+}
+
+#allcards {
+    width: 50vw;
+    min-width: 290px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 7vh;
+    }
+}
+
+.card {
+    padding: 30px;
+}
+
+.card > * {
+    margin: 1lh;
+}
+
+.button {
+    background-color: white;
+    border-radius: 30px;
+    width: 10rem;
+    padding: 0.5lh;
+    text-align: center;
+    border: 2px solid white;
+    transition-duration: 0.3s;
+}
+
+.button:hover {
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+#sedans {
+    background-color: var(--brightorange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    @media screen and (min-width: 768px) {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0px;
+    }
+}
+
+#sedans > .button {
+    color: var(--brightorange);
+}
+
+#sedans > .button:hover {
+    color: white;
+    background-color: var(--brightorange);
+}
+
+#suvs {
+    background-color: var(--darkcyan);
+}
+
+#suvs > .button {
+    color: var(--darkcyan)
+}
+
+#suvs > .button:hover {
+    background-color: var(--darkcyan);
+    color: white;
+} 
+
+#luxury {
+    background-color: var(--verydarkcyan);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    @media screen and (min-width: 768px) {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+    }
+}
+
+#luxury > .button {
+    color: var(--verydarkcyan);
+}
+
+#luxury > .button:hover {
+    color: white;
+    background-color: var(--verydarkcyan);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 1lh; 
+    color: var(--verydarkcyan);
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
